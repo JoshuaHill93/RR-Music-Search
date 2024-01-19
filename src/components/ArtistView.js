@@ -1,12 +1,12 @@
 // These components will be making separate API calls from the app
 // component to serve specific data about our artist
 import {useEffect, useState} from 'react'
-import {useParams, Link, useHistory} from 'react-router-dom'
+import {useParams, Link, useNavigate} from 'react-router-dom'
 
-const ArtistView = () => {
-    const { id } = useParams()
+ const ArtistView = () => {
+    const { id } = useNavigate()
     const [ artistData, setArtistData ] = useState([])
-    const history = useHistory()
+    const history = useNavigate()
     
     useEffect(() => {
         const API_URL = `http://localhost:4000/album/${id}`

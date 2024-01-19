@@ -1,7 +1,7 @@
 // These components will be making separate API calls from the app
 // component to serve specific data about a given album
 import {useEffect, useState} from 'react'
-import {useParams, useHistory} from 'react-router-dom'
+import {useParams, } from 'react-router-dom'
 
 const AlbumView = (props) => {
     const { id } = useParams()
